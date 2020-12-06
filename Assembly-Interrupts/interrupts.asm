@@ -6,9 +6,13 @@ org 100h
 
 ; add your code here
 
-; mov ah, 0eh
-; mov al, 'A'
-; int 0x10 ; interrupts the CPU
+mov al, -5
+sub al, 127
+into
+
+mov ah, 0eh
+mov al, 'A'
+int 0x10 ; interrupts the CPU
 
 push ds
 mov ax, 0
